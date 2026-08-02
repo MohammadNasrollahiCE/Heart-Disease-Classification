@@ -19,6 +19,8 @@ The purpose of this project is not only to build classification models, but also
 
 ✅ Decision Tree Classifier
 
+✅ SVM Classifier
+
 ✅ Model Comparison
 
 ✅ Performance Evaluation
@@ -36,6 +38,7 @@ The purpose of this project is not only to build classification models, but also
 │
 ├── Heart-Disease-Class-LogReg.ipynb
 ├── Heart-Disease-Class-DecisionTree.ipynb
+├── Heart-Disease-Class-SVM.ipynb
 │
 ├── requirements.txt
 └── README.md
@@ -100,6 +103,27 @@ The analysis includes:
 
 # 🤖 Models
 
+## 1️⃣ LSVM
+
+A classification algorithm suitable for binary classification tasks.
+
+Workflow
+Data Standardization
+Model Training with Cross-Validation & Hyperparameter Tuning
+Prediction
+Evaluation
+📈 Result
+
+One interesting observation during experimentation was the impact of feature standardization.
+
+| Before SVM with LR	     After SVM              |
+| --------------------------------------------------|
+| 85% Accuracy	             87% Accuracy           |
+
+This demonstrates the importance of proper feature scaling when using distance- or optimization-based machine learning algorithms such as SVM.
+
+---
+
 ## 1️⃣ Logistic Regression
 
 A linear classification algorithm suitable for binary classification tasks.
@@ -115,9 +139,9 @@ A linear classification algorithm suitable for binary classification tasks.
 
 One interesting observation during experimentation was the impact of **feature standardization**.
 
-| Before Standardization | After Standardization |
-| ---------------------- | --------------------- |
-| **82% Accuracy**       | **85% Accuracy**      |
+| Before Logistic Regression | After Logistic Regressio |
+| -------------------------- | ------------------------ |
+| **82% Accuracy**           | **85% Accuracy**         |
 
 This demonstrates the importance of proper feature scaling when using distance- or optimization-based machine learning algorithms such as Logistic Regression.
 
@@ -193,6 +217,7 @@ Through this project, I practiced:
 * Feature Engineering Fundamentals
 * Data Standardization
 * Binary Classification
+* SVM
 * Logistic Regression
 * Decision Trees
 * Model Evaluation
@@ -204,7 +229,6 @@ Through this project, I practiced:
 
 Some possible extensions include:
 
-* Feature Selection
 * Random Forest
 * Gradient Boosting
 * XGBoost
