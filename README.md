@@ -1,226 +1,237 @@
-# Heart Disease Classification using Decision Tree 🌳❤️
+# ❤️ Heart Disease Classification using Machine Learning
 
-A machine learning classification project that predicts the presence of heart disease using a Decision Tree Classifier.
+A complete end-to-end Machine Learning project for predicting the presence of **heart disease** using two popular supervised learning algorithms:
 
-The purpose of this project is to practice the complete machine learning workflow, including data exploration, data preprocessing, model training, and evaluation.
+* 📈 Logistic Regression
+* 🌳 Decision Tree
 
-> ⚠️ Disclaimer: This project is created for educational purposes only and should not be used for medical diagnosis or real-world clinical decisions.
-
----
-
-## 📌 Project Overview
-
-Heart disease is one of the most common health problems worldwide. In this project, a machine learning model is developed to classify whether a patient is likely to have heart disease based on clinical attributes.
-
-The project follows a typical machine learning pipeline:
-
-- Loading and understanding the dataset
-- Exploratory Data Analysis (EDA)
-- Data cleaning
-- Data preprocessing
-- Model training
-- Model evaluation
+The purpose of this project is not only to build classification models, but also to practice the complete machine learning workflow including data preprocessing, exploratory data analysis, model training, evaluation, and model comparison.
 
 ---
 
-## 📂 Dataset
+## 📌 Project Highlights
 
-The dataset contains clinical information about patients and is used for a binary classification task.
+✅ Complete Data Preprocessing
 
-### Target Variable
+✅ Exploratory Data Analysis (EDA)
 
-| Value | Meaning |
-|---|---|
-| 0 | No heart disease |
-| 1 | Presence of heart disease |
+✅ Logistic Regression with Pipeline , Cross-Validation & Hyperparameter Tuning
 
-### Features
+✅ Decision Tree Classifier
 
-The dataset includes medical attributes such as:
+✅ Model Comparison
 
-- Age
-- Sex
-- Chest pain type
-- Resting blood pressure
-- Cholesterol level
-- Maximum heart rate achieved
-- Exercise-induced angina
-- ST depression (Oldpeak)
-- Slope
-- Number of major vessels
-- Thalassemia
-- Other clinical measurements
+✅ Performance Evaluation
+
+✅ Reproducible Environment (`requirements.txt`)
 
 ---
 
-## 🔍 Exploratory Data Analysis (EDA)
+# 📂 Repository Structure
 
-The dataset was initially inspected to understand its structure and characteristics.
-
-The following analyses were performed:
-
-- Dataset preview using `head()`
-- Dataset information using `info()`
-- Statistical summary using `describe()`
-- Checking data types
-- Checking missing values
-- Detecting duplicate samples
-
-During data cleaning:
-
-- One duplicate record was detected and removed.
-- No further data cleaning was required.
-
-Data visualization was performed using **Matplotlib** and **Seaborn** to analyze feature distributions and relationships between variables.
-
----
-
-## 🛠️ Data Preprocessing
-
-The following preprocessing steps were applied:
-
-1. Removed duplicate records
-2. Separated features and target variable
-3. Split the dataset into training and testing sets
-4. Applied feature normalization
-
-The dataset was divided into:
-
-- Training data
-- Testing data
-
-to evaluate the model's ability to generalize to unseen data.
-
----
-
-## 🤖 Machine Learning Model
-
-### Decision Tree Classifier
-
-A Decision Tree Classifier was used for this classification task.
-
-Decision Trees are suitable for this type of problem because they:
-
-- Can model non-linear relationships
-- Are easy to interpret
-- Provide insight into feature importance
-
----
-
-## 📊 Model Evaluation
-
-The trained model was evaluated using:
-
-- Accuracy Score
-- Confusion Matrix
-- Classification Report
-
-### Results
-
-**Prediction Accuracy = 0.82**
-
-
-### Classification Report
-
-| Class | Precision | Recall | F1-score | Support |
-|---|---:|---:|---:|---:|
-| 0 | 0.75 | 0.93 | 0.83 | 29 |
-| 1 | 0.92 | 0.72 | 0.81 | 32 |
-
-Overall performance:
-
-
----
-
-## 📉 Confusion Matrix
-
-The confusion matrix was used to analyze the prediction results:
-
-- True Positive (TP) = 23
-- True Negative (TN) = 27
-- False Positive (FP) = 9
-- False Negative (FN) = 2
-
-This provides a better understanding of model performance beyond accuracy alone.
-
----
-
-## 🧰 Technologies Used
-
-- Python
-- NumPy
-- Pandas
-- Seaborn
-- Scikit-learn
-- Jupyter Notebook
-
----
-
-## 📁 Project Structure
-
-Classification/
+```text
+.
+├── dataset/
+│   └── heart.csv
 │
+├── Heart-Disease-Class-LogReg.ipynb
 ├── Heart-Disease-Class-DecisionTree.ipynb
 │
-├── README.md
-│
-└── dataset/
-    └── HeartDisease.csv
-
+├── requirements.txt
+└── README.md
+```
 
 ---
 
-## 🚀 Future Improvements
+# 📊 Dataset
 
-Possible improvements for this project:
+This project uses the **Heart Disease Dataset**, a binary classification dataset containing medical information collected from patients.
 
-### Model Comparison
+### Features include:
 
-Train and compare multiple classification algorithms:
+* Age
+* Sex
+* Chest Pain Type
+* Resting Blood Pressure
+* Cholesterol
+* Fasting Blood Sugar
+* Resting ECG
+* Maximum Heart Rate
+* Exercise-Induced Angina
+* Oldpeak
+* ST Slope
+* Number of Major Vessels
+* Thalassemia
 
-- Logistic Regression
-- K-Nearest Neighbors (KNN)
-- Support Vector Machine (SVM)
-- Random Forest
-- XGBoost
+### Target
 
-### Model Optimization
-
-Apply:
-
-- Cross Validation
-- GridSearchCV
-- RandomizedSearchCV
-
-### Additional Evaluation
-
-Add:
-
-- ROC-AUC Curve
-- Precision-Recall Curve
-- More detailed error analysis
-
-### Explainability
-
-Improve model interpretation using:
-
-- Feature Importance
-- SHAP values
-
-### Deployment
-
-Create a simple web application using:
-
-- Streamlit
-- Flask
-
-to allow users to input patient information and receive predictions.
+| Value | Meaning          |
+| ----- | ---------------- |
+| 0     | No Heart Disease |
+| 1     | Heart Disease    |
 
 ---
 
-## 👤 Author
+# 🧹 Data Preprocessing
 
-**Mohammad Nasrollahi**
+The following preprocessing steps were performed before training the models:
 
-GitHub:  
-https://github.com/MohammadNasrollahiCE
+* Removed duplicate records
+* Checked for missing values
+* Dataset inspection using `info()` and `describe()`
+* Exploratory Data Analysis (EDA)
+* Train/Test Split
+* Feature Standardization (Logistic Regression only)
+
+---
+
+# 📈 Exploratory Data Analysis
+
+Several visualizations were created to better understand the dataset and identify relationships between features and the target variable.
+
+The analysis includes:
+
+* Feature distributions
+* Class distributions
+* Correlation analysis
+* Medical feature exploration using Seaborn visualizations
+
+---
+
+# 🤖 Models
+
+## 1️⃣ Logistic Regression
+
+A linear classification algorithm suitable for binary classification tasks.
+
+### Workflow
+
+* Data Standardization
+* Model Training with Pipeline , Cross-Validation & Hyperparameter Tuning
+* Prediction
+* Evaluation
+
+### 📈 Result
+
+One interesting observation during experimentation was the impact of **feature standardization**.
+
+| Before Standardization | After Standardization |
+| ---------------------- | --------------------- |
+| **82% Accuracy**       | **85% Accuracy**      |
+
+This demonstrates the importance of proper feature scaling when using distance- or optimization-based machine learning algorithms such as Logistic Regression.
+
+---
+
+## 2️⃣ Decision Tree
+
+A tree-based machine learning algorithm capable of learning nonlinear decision boundaries without requiring feature scaling.
+
+### Workflow
+
+* Model Training
+* Prediction
+* Performance Evaluation
+
+---
+
+# 📊 Evaluation
+
+The models were evaluated using:
+
+* Accuracy Score
+* Precision
+* Recall
+* F1-Score
+* Confusion Matrix
+* Classification Report
+
+These metrics provide a comprehensive view of model performance beyond simple accuracy.
+
+---
+
+# 🛠 Technologies Used
+
+* Python
+* NumPy
+* Pandas
+* Matplotlib
+* Seaborn
+* Scikit-learn
+* Jupyter Notebook
+
+---
+
+# 🚀 Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/heart-disease-classification.git
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Launch Jupyter Notebook:
+
+```bash
+jupyter notebook
+```
+
+---
+
+# 🎯 What I Learned
+
+Through this project, I practiced:
+
+* Data Cleaning
+* Exploratory Data Analysis
+* Feature Engineering Fundamentals
+* Data Standardization
+* Binary Classification
+* Logistic Regression
+* Decision Trees
+* Model Evaluation
+* Comparing Multiple Machine Learning Models
+
+---
+
+# 🔮 Future Improvements
+
+Some possible extensions include:
+
+* Feature Selection
+* Random Forest
+* Gradient Boosting
+* XGBoost
+* LightGBM
+* SHAP Explainability
+
+---
+
+# 📄 Requirements
+
+The repository includes a **requirements.txt** file, allowing the project environment to be recreated easily with a single command:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# 🤝 Contributing
+
+Contributions, suggestions, and improvements are always welcome.
+
+If you find this project useful, consider giving it a ⭐ on GitHub!
+
+---
+
+# 📜 License
+
+This project is intended for educational and learning purposes.
+
